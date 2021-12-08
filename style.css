@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 300;
+  font-display: fallback;
+  src: local('Rubik-Light'), url('/fonts/Rubik-Light.woff2') format('woff2'),
+    url('/fonts/Rubik-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Rubik-Reuglar'), url('/fonts/Rubik-Regular.woff2') format('woff2'),
+    url('/fonts/Rubik-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-display: fallback;
+  src: local('Rubik-SemiBold'),
+    url('/fonts/Rubik-SemiBold.woff2') format('woff2'),
+    url('/fonts/Rubik-SemiBold.woff') format('woff');
+}
+
+:root {
+  --ff: 'Rubik', sans-serif;
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-600: 1.5rem;
+  /* --weight-light: 300;
+  --weight-medium: 400;
+  --weight-semibold: 600; */
+  --c-light: #f6f8fa;
+  --c-dark: #25292e;
+}
+
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  background-color: var(--c-light);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
+      16 0,
+    auto;
+}
+
+body {
+  font-family: var(--ff);
+  color: var(--c-dark);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  /* position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+/* header h1 {
+  position: absolute;
+  left: 10%;
+  bottom: 1rem;
+  font-size: 1.5rem;
+} */
+
+/* Splash screen */
+
+.splash-screen {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: 1s;
+}
+
+.splash-site-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: var(--fs-400);
+  font-weight: 600;
+}
+
+.splash-span {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.splash-span.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.splash-span.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+/* Arrow */
+
+.bounce {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  -moz-animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+  animation: bounce 4s infinite;
+}
+
+/* .bounce {
+
+} */
+
+/* @-webkit-keyframes bounce {
+  50% {
+    transform: translateY(30%);
+  }
+}
+
+@-moz-keyframes bounce {
+  50% {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(30%);
+  }
+} */
