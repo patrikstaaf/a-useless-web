@@ -1,4 +1,4 @@
-INSERT MANDATORY GIF
+<img src="https://c.tenor.com/yDbZ8_z1NPgAAAAC/dad-jokes-mic.gif" width="100%">
 
 # Project Title
 
