@@ -1,19 +1,3 @@
-// Fetch jokes from Dad Joke Api
-
-const getJokes = async () => {
-  const response = await fetch('https://icanhazdadjoke.com/', {
-    headers: {
-      Accept: 'application/json',
-    },
-  });
-  const joke = await response.json();
-  console.log(joke.joke);
-};
-
-getJokes();
-
-// Splash screen
-
 const splashScreen = document.querySelector('.splash-screen');
 const splashSiteName = document.querySelector('.splash-site-name');
 const splashSpan = document.querySelectorAll('.splash-span');
