@@ -2,7 +2,7 @@
 
 # Poetry Dad
 
-A school assignment to create a useless site. Although, if you like dad jokes, i.e. dry humor/deadpan, it might not be so useless.
+A school assignment to create a useless site. Although, if you like dad jokes it might not be so useless.
 
 Live: [https://poetrydad.netlify.app](https://poetrydad.netlify.app)
 
