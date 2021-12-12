@@ -59,6 +59,7 @@ main {
   font-size: var(--button-font);
   font-family: 'Special Elite', cursive;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .joke-text {
