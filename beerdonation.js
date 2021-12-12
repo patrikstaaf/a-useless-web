@@ -1,15 +1,19 @@
 const beerButton = document.querySelector('.beer-button');
 const beerCounter = document.querySelector('.beer-counter');
+const beerVideo = document.querySelector('.beer-video');
 let count = 0;
 
 const countDblclicks = () => {
-  const beeraudio = new Audio('./audio/open-bottle.mp3');
+  // When dblclicked, do the following below
+  displayVideo();
+  const beeraudio = new Audio('./audio/open-can.mp3');
   beeraudio.play();
-  count++;
+  count++; // Increment the variable count for each click
   countBeers();
 };
 
 const countBeers = () => {
+  // Display the amount of "beer donations" and display correct grammar, lol...
   if (count === 1) {
     beerCounter.textContent = `Cheers for the ${count} beer!`;
   }
@@ -18,8 +22,9 @@ const countBeers = () => {
   }
 };
 
+const displayVideo = () => {
+  // Make the video visible and apply its styling
+  beerVideo.classList.add('active');
+};
+
 beerButton.addEventListener('dblclick', countDblclicks);
-
-// store in localstorage?
-
-// display some svg beer, cheers?

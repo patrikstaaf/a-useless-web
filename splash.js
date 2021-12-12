@@ -2,8 +2,7 @@ const splashScreen = document.querySelector('.splash-screen');
 const splashSiteName = document.querySelector('.splash-site-name');
 const splashSpan = document.querySelectorAll('.splash-span');
 
-const splashysplash = () => {
-  // window.addEventListener('DOMContentLoaded', () => {
+const splashySplash = () => {
   // Trigger nested functions when the DOM has been fully loaded
   setTimeout(() => {
     // Set timer for animation
@@ -31,4 +30,4 @@ const splashysplash = () => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', splashysplash);
+window.addEventListener('DOMContentLoaded', splashySplash);

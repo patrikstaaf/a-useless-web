@@ -9,6 +9,14 @@
 
 :root {
   --ff: 'Special Elite', cursive;
+  --video-width: min(400px, 60vw);
+  --button-font: clamp(0.8rem, 3vw, 1.1rem);
+  --joke-font: clamp(1rem, 5vw, 1.8rem);
+  --counter-margin: clamp(0.8rem, 5vw, 2.5rem);
+  --joke-margin: clamp(0.8rem, 5vw, 5rem);
+  --joke-width: min(60ch, 70vw);
+  --splash-font: clamp(1.5rem, 7vw, 3rem);
+  --beer-color: #fae96f;
 }
 
 *,
@@ -28,10 +36,7 @@ html {
 body {
   background: url('./images/background.webp');
   background-size: cover;
-  font-family: 'Special Elite', cursive;
-  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
-      16 0,
-    auto; */
+  font-family: var(--ff);
   background-size: 100%;
   background-position: bottom;
   -webkit-font-smoothing: antialiased;
@@ -50,54 +55,63 @@ main {
   border: none;
   background-color: black;
   color: white;
-  font-size: 1rem;
   padding: 0.8rem;
+  font-size: var(--button-font);
   font-family: 'Special Elite', cursive;
-  /* position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   border-radius: 4px;
-  margin-top: 2rem;
-  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
-      16 0,
-    auto; */
 }
 
 .joke-text {
-  font-size: 1.8rem;
-  max-width: 60%;
-  /* position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  font-size: var(--joke-font);
+  width: var(--joke-width);
+  margin-bottom: var(--joke-margin);
+  text-align: center;
 }
-
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0);
-} */
 
 .beer-button {
   border: none;
-  background-color: #fae96f;
+  background-color: var(--beer-color);
   color: #000;
-  font-size: 1rem;
+  font-size: var(--button-font);
   padding: 0.8rem;
   font-family: 'Special Elite', cursive;
-  /* position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   border-radius: 4px;
-  margin-top: 2rem;
+  padding-top: 1rem;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
       16 0,
     auto;
+}
+
+.beer-counter {
+  margin: var(--counter-margin);
+  font-size: var(--button-font);
+}
+
+.beer-video {
+  display: none;
+}
+
+.beer-video.active {
+  display: inline-block;
+  width: var(--video-width);
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 /* Splash screen */
@@ -108,7 +122,7 @@ main {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #161616;
+  background-color: black;
   transition: 1s;
 }
 
@@ -118,7 +132,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: var(--splash-font);
   font-weight: 600;
 }
 
