@@ -10,10 +10,20 @@ const getJokes = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
       newJoke(data.joke);
     });
+
+  // .then((data) => {
+  //   // console.log(data);
+  //   newJoke(data.joke);
+  // });
 };
+
+// then(function (response) {
+//   response.forEach((data) => {
+//     storeJokes.push(data);
+//   });
+// });
 
 // const storeJokes = (num) => {
 //   let arrayJokes = [];
@@ -28,7 +38,37 @@ const newJoke = (joke) => {
   // Reset index
   i = 0;
   typewriter(joke); // Initiate a new joke
+  storeJokesFunction(joke);
+  // console.log(storeJokess);
+  // const storeJokes = [];
+  // storeJokes.push(joke);
+  // console.log(storeJokes);
 };
+
+const storeJokesFunction = (joke) => {
+  const storeJokess = [];
+  for (let i = 0; i < joke; i++) {
+    storeJokess.push(i);
+    console.log(storeJokess);
+  }
+  return storeJokess;
+};
+
+// function factorialize(num) {
+//   let arr = [];
+// for (let i = 0;i <= num ; i++){
+// arr.push[i]
+
+// }
+// return arr;
+// }
+
+// const storeJokesFunction = (joke) => {
+//   storeJokesFunction.forEach((joke) => {
+//     storeJokess.push(joke);
+//     console.log(storeJokess);
+//   });
+// };
 
 const typewriter = (text) => {
   // console.log(typewriter);
@@ -57,6 +97,7 @@ const timeout = (text) => {
   }, Math.floor(Math.random() * 300) + 100);
 };
 
+//
 // const clearTimer = (timeout) => {
 //   clearTimeout(timeout);
 // };

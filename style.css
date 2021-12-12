@@ -29,9 +29,12 @@ body {
   background: url('./images/background.webp');
   background-size: cover;
   font-family: 'Special Elite', cursive;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
       16 0,
-    auto;
+    auto; */
+  background-size: 100%;
+  background-position: bottom;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -56,9 +59,9 @@ main {
   transform: translate(-50%, -50%); */
   border-radius: 4px;
   margin-top: 2rem;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
       16 0,
-    auto;
+    auto; */
 }
 
 .joke-text {
@@ -68,6 +71,33 @@ main {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); */
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+} */
+
+.beer-button {
+  border: none;
+  background-color: #fae96f;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-family: 'Special Elite', cursive;
+  /* position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🍺</text></svg>")
+      16 0,
+    auto;
 }
 
 /* Splash screen */
