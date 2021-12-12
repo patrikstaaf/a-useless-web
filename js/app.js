@@ -1,6 +1,5 @@
 const jokeText = document.querySelector('.joke-text');
 const jokeButton = document.querySelector('.joke-button');
-// const text = '';
 
 const getJokes = () => {
   fetch('https://icanhazdadjoke.com/', {
@@ -42,9 +41,5 @@ const timeout = (text) => {
     typewriter(text);
   }, Math.floor(Math.random() * 300) + 100);
 };
-
-// const clearTimer = (timeout) => {
-//   clearTimeout(timeout);
-// };
 
 jokeButton.addEventListener('click', getJokes);
