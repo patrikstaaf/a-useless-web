@@ -1,12 +1,10 @@
 <img src="https://c.tenor.com/yDbZ8_z1NPgAAAAC/dad-jokes-mic.gif" width="100%">
 
-# Project Title
+# Poetry Dad
 
-Text about the project. This would also be a great place to link the game on Netlify.
+A school assignment to create a useless site. Although, if you like dad jokes, i.e. dry humor/deadpan, it might not be so useless.
 
-# Installation
-
-Add the installation instructions.
+Live: [https://poetrydad.netlify.app](https://poetrydad.netlify.app)
 
 # Code Review
 
