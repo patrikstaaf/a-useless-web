@@ -18,5 +18,6 @@ Live: [https://poetrydad.netlify.app](https://poetrydad.netlify.app)
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. [Hanna Rosenberg](https://github.com/hanna-rosenberg)
+2. [Simon Heiler](https://github.com/Sakariash)
+3. [Theo Sandell](https://github.com/theo0165)
